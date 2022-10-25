@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,16 +13,26 @@ namespace Doubler
 {
     public partial class Main : Form
     {
-        //Для пул реквеста
+
         private Random random = new Random();
         private int computernumber;
         private int usernumber;
         private int countnumber;
-        
-        
+
+
         public Main()
         {
+
             InitializeComponent();
+            labelusernumber.Parent = pictureBox1;
+            labelusernumber.BackColor = Color.Transparent;
+            labelcompnumber.Parent = pictureBox1;
+            labelcompnumber.BackColor = Color.Transparent;
+            labelcount.Parent = pictureBox1;
+            labelcount.BackColor = Color.Transparent;
+            labelcountnumber.Parent = pictureBox1;
+            labelcountnumber.BackColor = Color.Transparent;
+
             GameStart();
         }
 
@@ -90,6 +101,16 @@ namespace Doubler
             {
                 Close();
             }
+        }
+
+        private void labelcompnumber_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelcountnumber_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
