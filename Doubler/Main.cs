@@ -12,6 +12,7 @@ namespace Doubler
 {
     public partial class Main : Form
     {
+        //Для пул реквеста
         private Random random = new Random();
         private int computernumber;
         private int usernumber;
